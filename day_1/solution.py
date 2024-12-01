@@ -1,4 +1,4 @@
-
+from collections import Counter
 
 # Initialize the lists we'll be using
 list_1 = []
@@ -24,3 +24,14 @@ for i in range(len(list_1)):
 # Print the total difference of the two lists
 print(f"Total difference: {total_difference}")
 
+# Calculate the similarity score
+# Converts each list into counter objects instead of iterating through each list
+similarity_score = 0
+counter_1 = Counter(list_1)
+counter_2 = Counter(list_2)
+for num in counter_1:
+    if num in counter_2:
+        similarity_score += num * counter_1[num] * counter_2[num]
+
+# Print the similarity score of the two lists
+print(f"Similarity score: {similarity_score}")
