@@ -5,7 +5,7 @@ list_1 = []
 list_2 = []
 
 # Read the location_ids into their respective lists
-with open("location_ids.txt", 'r') as file:
+with open("location_ids.txt", "r") as file:
     for line in file:
         ids = line.strip().split()
         list_1.append(int(ids[0]))
@@ -25,7 +25,8 @@ for i in range(len(list_1)):
 print(f"Total difference: {total_difference}")
 
 # Calculate the similarity score
-# Converts each list into counter objects instead of iterating through each list
+# Converts each list into counter objects instead of iterating through each
+# list
 similarity_score = 0
 counter_1 = Counter(list_1)
 counter_2 = Counter(list_2)
